@@ -24,9 +24,9 @@ If you want this to go directly into a separate repo, you could do something lik
 
 ```ts
 // some standalone project, without an actual prisma client
-import { Post, Prisma, PrismaClient } from './prisma-types';
+import { Prisma, PrismaClient, Post } from './prisma-types';
 
-const getPosts = (): Promise<Prisma.Post[]> => fetch(...)
+const getPosts = (): Promise<Post[]> => fetch(...)
 
 const createPost = (postData: Prisma.PostCreateInput): Promise<Post> =>
     fetch(...)
