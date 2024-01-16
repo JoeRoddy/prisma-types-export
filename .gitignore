@@ -1,0 +1,16 @@
+dist
+node_modules
+yarn-error.log
+build
+pnpm-debug.log
+.env*
+.DS_Store
+dev.db
+
+# random testing crap
+packages/usage/prisma/prisma-types
+/packages/usage/output
+/packages/usage/custom-output
+/packages/usage/__tests__/generated
+/packages/usage/prisma/prisma
+/packages/usage/temp
