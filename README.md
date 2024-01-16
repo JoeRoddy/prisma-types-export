@@ -17,6 +17,21 @@ Export your prisma types files to a local directory, to share across multiple pr
 
 You should see a new directory in `/prisma/prisma-types` (you can configure this via the `output` opt).
 
+If you want this to go directly into a separate repo, you could do something like:
+`output = "../../prisma-types"`
+
+## Using your exported types
+
+```ts
+// some standalone project, without an actual prisma client
+import { Post, Prisma, PrismaClient } from './prisma-types';
+
+const getPosts = (): Promise<Prisma.Post[]> => fetch(...)
+
+const createPost = (postData: Prisma.PostCreateInput): Promise<Post> =>
+    fetch(...)
+```
+
 **Note about monorepos**:
 
 If you are using a monorepo like pnpm workspaces, you may need to add a custom output location to your prisma client:
