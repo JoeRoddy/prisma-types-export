@@ -1,7 +1,7 @@
 {
   "name": "prisma-types-export",
-  "description": "",
-  "version": "0.0.0-alpha.1",
+  "description": "Export prisma types to a local directory",
+  "version": "1.0.0",
   "license": "ISC",
   "main": "index.js",
   "types": "index.d.ts",
@@ -16,8 +16,7 @@
     "dev": "npx tsc -w",
     "build": "rm -rf dist && npx tsc",
     "prepack": "yarn build",
-    "test": "jest",
-    "echo": "echo hello"
+    "test": "jest"
   },
   "dependencies": {
     "@prisma/generator-helper": "5.1.0"
@@ -41,8 +40,7 @@
     "prisma",
     "generator",
     "database",
-    "sql",
-    "serverless"
+    "sql"
   ],
   "release": {
     "branches": [
